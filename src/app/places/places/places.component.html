@@ -1,0 +1,93 @@
+<div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
+    <h2 class="text 2x1 font-semibold text-gray-700 mb-4">Novo Local </h2>
+    <hr>
+    <form id="placeForm" [formGroup]="fieldForm" (ngSubmit)="save()">
+        <div class="mb-4">
+            <label for="name" 
+            class="block text-gray-600 font-medium mb-2">Nome</label>
+            <input 
+            type="text" 
+            id="name" name="name" 
+            formControlName="name"
+            placeholder="Que lugar é esse?"
+            class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" required/>
+            <span class="text-red-500 text-sm" *ngIf="isFieldInvalid('name')">
+                Campo Obrigatório
+            </span>
+        </div>
+        <div class="mb-4">
+            <label 
+            class="block text-gray-600 font-medium mb-2"
+            for="category">
+             Categoria
+            </label>
+            <select
+            id="category"
+            name="category"
+            formControlName="category"
+            class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" required>
+                <option  value="" disabled selected>Selecione uma categoria</option>
+                <option *ngFor="let cat of categories" [value]="cat.name">{{cat.name}}</option>
+            </select>
+            <span class="text-red-500 text-sm" *ngIf="isFieldInvalid('category')">
+                Campo obrigatório
+            </span>
+        </div>
+        <div class="mb-4">
+                <label for="location" 
+                class="block text-gray-600 font-medium mb-2">Localização</label>
+                <input 
+                type="text" 
+                id="location" 
+                name="location" 
+                formControlName="location"
+                placeholder="Onde fica esse lugar?"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" required/>
+                <span class="text-red-500 text-sm" *ngIf="isFieldInvalid('location')">
+                    Campo obrigatório
+                </span>
+            </div>
+            <div class="mb-4">
+                <label for="imageUrl" 
+                class="block text-gray-600 font-medium mb-2">Imagem(URL)</label>
+                <input 
+                type="text" 
+                id="imageUrl" 
+                name="imageUrl" 
+                formControlName="imageUrl"
+                placeholder="Ex: https://example.com/image.jpg"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" required/>
+            <span class="text-gray-500 text-sm font-medium ">.PNG, .JPEG ou .WEBP</span>
+            </div>
+              <span class="text-red-500 text-sm" *ngIf="isFieldInvalid('imageUrl')">
+                Por favor, insira uma URL válida
+            </span>
+            <div class="mb-4">
+                <label 
+                class="block text-gray-600 font-medium mb-2"
+                for="rating">
+                 Avaliação
+                </label>
+                <select
+                id="rating"
+                name="rating"
+                formControlName="rating"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" required>
+                    <option  value="" disabled selected>Dê uma nota ao lugar</option>
+                    <option [value]="1"> 1 - Péssimo</option>
+                    <option [value]="2">2 - Ruim</option>
+                    <option [value]="3">3 -Regular</option>
+                    <option [value]="4">4 -Bom</option>
+                    <option [value]="5">5 - Excelente</option>
+                </select>
+                <span class="text-red-500 text-sm" *ngIf="isFieldInvalid('rating')">
+                    Campo obrigatório
+                </span>
+            </div>
+        <button
+        type="submit"
+        class="w-full bg-blue-600 text-white font-semibold p-4 rounded shadow hover:bg-blue-700">
+            Enviar
+        </button>
+    </form>
+</div>

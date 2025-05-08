@@ -1,0 +1,26 @@
+<div class="h-screen flex flex-col justify-between">
+    <header class="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-6 shadow-lg">
+        <div class="text-center">
+            <h1 class="text-3x1 font-bold">{{props.title}}</h1>
+            <p class="text-lg" mt-2>{{props.subTitle}}</p>
+        </div>
+        <div class="mt-2">
+            <hr class="border-t border-gray-300 opacity-50" />
+        </div>
+        <nav class="mt-2 ">
+            <ul class="flex justify-center space-x-4 text-white font-semibold">
+                <li> <a class="hover:text-slate-400" routerLink="/pages/gallery">Galeria</a></li>
+                <li><a class="hover:text-slate-400" routerLink="/pages/categories">Categorias</a></li>
+                <li><a class="hover:text-slate-400" routerLink="/pages/places">Lugares</a></li>
+                <li><a (click)="loggout()" class="hover:text-slate-400" href="">Sair</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+    <router-outlet></router-outlet>
+    <footer class="bg-gradient-to-r from-gray-700 to-gray-900 text-center p-4 mt-6">
+        <p class="text-white text-sm">
+            &copy; 2025 Todos os direitos reservados.
+        </p>
+    </footer>
+</div>

@@ -1,0 +1,37 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Restaurantes",
+      "description": "Experiências gastronômicas de todos os gostos e preços!"
+    },
+    {
+      "id": "c246",
+      "name": "Praias",
+      "description": "Lugares paradisíacos"
+    },
+    {
+      "id": "beed",
+      "name": "Museus",
+      "description": "Lugar recheado de história e conhecimento"
+    }
+  ],
+  "places": [
+    {
+      "id": "60c2",
+      "name": "Praia do Futuro",
+      "category": "Praias",
+      "imageUrl": "https://www.tenda.com/blog/wp-content/uploads/2024/04/Onde-fica-a-Praia-do-Futuro.jpg",
+      "location": "Fortaleza - CE ",
+      "rating": "5"
+    },
+    {
+      "name": "Memorial do ET de Varginha",
+      "category": "Museus",
+      "imageUrl": "https://s2-g1.glbimg.com/3SGbR5Q1X7_xZXy-NrWUViwbJ-A=/0x0:4928x2897/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/s/2/3YMjZMRHm2qrvGJOGeOg/memorial2.jpg",
+      "location": "Varginha - MG",
+      "rating": "4",
+      "id": "Vy_pdQ7"
+    }
+  ]
+}
